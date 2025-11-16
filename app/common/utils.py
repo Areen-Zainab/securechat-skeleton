@@ -1,5 +1,6 @@
 """
 Common utility functions for encoding, hashing, and timestamps.
+
 """
 
 import base64
