@@ -102,7 +102,6 @@ def validate_certificate_chain(
 ) -> Tuple[bool, str, Optional[x509.Certificate]]:
     """
     Validate certificate received from peer.
-    
     Args:
         cert_pem: Certificate in PEM format (bytes)
         ca_cert_path: Path to CA certificate

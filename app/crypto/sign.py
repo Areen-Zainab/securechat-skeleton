@@ -73,7 +73,6 @@ def sign_message_digest(digest: bytes, private_key) -> bytes:
 def verify_message_digest(digest: bytes, signature: bytes, certificate: x509.Certificate) -> bool:
     """
     Verify signature over a pre-computed digest.
-    
     Args:
         digest: SHA-256 digest (32 bytes)
         signature: Signature to verify

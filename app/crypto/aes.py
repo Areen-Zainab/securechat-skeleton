@@ -11,7 +11,6 @@ from cryptography.hazmat.backends import default_backend
 def pkcs7_pad(data: bytes, block_size: int = 128) -> bytes:
     """
     Apply PKCS#7 padding to data.
-    
     Args:
         data: Data to pad
         block_size: Block size in bits (default: 128 for AES)
@@ -105,7 +104,6 @@ def aes_decrypt(ciphertext: bytes, key: bytes) -> bytes:
 def encrypt_message(message: str, key: bytes) -> bytes:
     """
     Encrypt a text message.
-    
     Args:
         message: Text message to encrypt
         key: 16-byte AES key
@@ -120,7 +118,6 @@ def encrypt_message(message: str, key: bytes) -> bytes:
 def decrypt_message(ciphertext: bytes, key: bytes) -> str:
     """
     Decrypt a ciphertext to text message.
-    
     Args:
         ciphertext: Encrypted data
         key: 16-byte AES key

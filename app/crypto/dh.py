@@ -115,7 +115,6 @@ def perform_dh_exchange_client(peer_public_key: int, p: int, g: int) -> Tuple[in
 def perform_dh_exchange_server(peer_public_key: int, p: int, g: int) -> Tuple[int, bytes]:
     """
     Server-side DH exchange.
-    
     Args:
         peer_public_key: Client's public key A
         p: Prime modulus
