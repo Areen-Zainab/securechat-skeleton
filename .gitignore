@@ -1,0 +1,226 @@
+# ================================================
+# SecureChat .gitignore
+# ================================================
+# This file tells Git which files to NEVER commit
+# CRITICAL: Protects secrets, certificates, and sensitive data
+# ================================================
+
+# ================================================
+# ENVIRONMENT & SECRETS (CRITICAL - NEVER COMMIT!)
+# ================================================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ================================================
+# CERTIFICATES & PRIVATE KEYS (CRITICAL - NEVER COMMIT!)
+# ================================================
+# All certificate and key files must stay LOCAL ONLY
+certs/*.pem
+certs/*.key
+certs/*.crt
+certs/*.csr
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# Keep the certs directory structure but ignore contents
+!certs/.keep
+
+# ================================================
+# TRANSCRIPTS & LOGS (Contains session data)
+# ================================================
+transcripts/
+!transcripts/.keep
+logs/
+*.log
+
+# ================================================
+# DATABASE FILES & DUMPS
+# ================================================
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# ================================================
+# PYTHON
+# ================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ================================================
+# IDEs & EDITORS
+# ================================================
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ================================================
+# OPERATING SYSTEM FILES
+# ================================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Linux
+.directory
+.Trash-*
+
+# ================================================
+# TEMPORARY FILES
+# ================================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.old
+*~
+
+# ================================================
+# TEST & DEBUG FILES
+# ================================================
+*.pcap
+*.pcapng
+test_output/
+debug/
+
+# ================================================
+# WIRESHARK CAPTURES (Large files - don't commit)
+# ================================================
+# Note: Save small, relevant captures for evidence
+# but keep full session captures locally only
+captures/
+*.cap
+
+# ================================================
+# DOCUMENTATION DRAFTS (Keep final versions only)
+# ================================================
+drafts/
+*.draft.md
+*.wip.docx
+
+# ================================================
+# KEEP THESE FILES (Override previous rules)
+# ================================================
+# Keep example environment file (no secrets)
+!.env.example
+
+# Keep placeholder files for empty directories
+!.keep
+!.gitkeep
+
+# Keep README and documentation
+!README.md
+!docs/**
+
+# ================================================
+# PROJECT-SPECIFIC IGNORES
+# ================================================
+# Backup files
+backup/
+*.backup
+
+# Archive files (if you create zips for testing)
+*.zip
+*.tar.gz
+*.rar
+
+# Personal notes (keep your notes private)
+notes.txt
+TODO.txt
+personal/
+
+# ================================================
+# END OF .gitignore
+# ================================================
