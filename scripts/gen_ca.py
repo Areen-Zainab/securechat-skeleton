@@ -1,6 +1,7 @@
 """
 Generate a self-signed Root CA certificate.
 Usage: python scripts/gen_ca.py --name "FAST-NU Root CA"
+
 """
 
 import argparse
@@ -15,7 +16,6 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 def generate_root_ca(ca_name: str, output_dir: Path):
     """
     Generate a self-signed root CA certificate.
-    
     Args:
         ca_name: Common Name for the CA
         output_dir: Directory to save the CA key and certificate

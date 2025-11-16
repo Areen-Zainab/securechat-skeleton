@@ -35,6 +35,7 @@ def generate_certificate(common_name: str, ca_key, ca_cert, output_prefix: Path)
         ca_key: CA private key for signing
         ca_cert: CA certificate
         output_prefix: Path prefix for output files (e.g., "certs/server")
+        
     """
     output_prefix.parent.mkdir(parents=True, exist_ok=True)
     
