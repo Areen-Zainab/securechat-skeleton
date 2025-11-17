@@ -4,3 +4,5 @@
 - SIG_FAIL on tamper (flip bit in ct)
 - REPLAY on reused seqno
 - Transcript + signed SessionReceipt
+
+- why 
